@@ -9,7 +9,8 @@ USER root
 USER jenkins
 
 #secrets
-#COPY secrets /usr/share/jenkins/ref/secrets/
+COPY secrets /usr/share/jenkins/ref/secrets/
+COPY credentials.xml /usr/share/jenkins/ref/credentials.xml
 #maven
 COPY maven/hudson.tasks.Maven.xml /usr/share/jenkins/ref/hudson.tasks.Maven.xml
 COPY maven/jenkins.mvn.GlobalMavenConfig.xml /usr/share/jenkins/ref/jenkins.mvn.GlobalMavenConfig.xml
