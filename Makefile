@@ -13,6 +13,7 @@ docker-push:
 docker-run: docker-build
 	docker run --rm -it \
 	-e java.util.logging.config.file=/var/jenkins_home/log.properties \
+	--env-file .env \
 	-p 8180:8080 \
 	-p 50000:50000 \
 	-v `pwd`/data:/var/jenkins_home \

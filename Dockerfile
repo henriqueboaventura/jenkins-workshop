@@ -1,13 +1,5 @@
 FROM jenkins/jenkins
 
-ENV JENKINS_USER admin
-ENV JENKINS_PASS admin
-
-USER root
-#RUN apt-get update && apt-get install -y vim ack
-
-USER jenkins
-
 #secrets
 COPY secrets /usr/share/jenkins/ref/secrets/
 COPY credentials.xml /usr/share/jenkins/ref/credentials.xml
